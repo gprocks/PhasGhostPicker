@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    <h1> Ghost Picker </h1>
     <div class="row">
       <div class="col">
         <evidence
@@ -32,7 +33,7 @@
       class="row"
     >
       <div class="col">
-        <h1>Possible Ghosts</h1>
+        <h2>Possible Ghosts</h2>
         <div
           v-for="ghost in possibleGhostOptions"
           :key="ghost.name"
@@ -105,10 +106,14 @@ export default {
 }
 </script>
 
-<style>
-.container-fluid{
-    padding: 0 !important;
-      font-family: 'Roboto Condensed', sans-serif;
+<style lang="scss">
+@import "~bootswatch/dist/slate/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/slate/bootswatch";
+
+body{
+      font-family: 'Roboto', sans-serif !important;
+      // background-color: value(--blue);
 }
 
 </style>

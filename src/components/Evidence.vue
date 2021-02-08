@@ -1,23 +1,29 @@
 <template>
   <section>
-    <div class="btn-group mb-3">
-      <button
-        v-for="val in evidence"
-        :key="val"
-        type="button"
-        class="btn btn-sm"
-        :class="internalValue==val?'btn-outline-primary':'btn-primary'"
-        :disabled="isValueDisabled(val)"
-        @click="setValue(val)"
-      >
-        {{ val }}
-      </button>
-      <b-button
-        variant="danger"
-        @click="setValue('')"
-      >
-        Clear
-      </b-button>
+    <div class="mb-3">
+      <b-input-group>
+        <b-form-select
+          v-model="internalValue"
+          :options="availableOptions"
+        >
+          <template #first>
+            <b-form-select-option
+              :value="''"
+              disabled
+            >
+              Please select an option
+            </b-form-select-option>
+          </template>
+        </b-form-select>
+        <template #append>
+          <b-button
+            variant="secondary"
+            @click="setValue('')"
+          >
+            Clear
+          </b-button>
+        </template>
+      </b-input-group>
     </div>
   </section>
 </template>
@@ -58,7 +64,7 @@ export default {
     availableOptions () {
       const possibleOptions = [...new Set(this.ghostList.flatMap(x => x.evidenceTypes))]
       return this.evidence.filter(x => {
-        return (x === this.selectedValues || !this.selectedValues.includes(x)) && possibleOptions.includes(x)
+        return (x === this.internalValue || !this.selectedValues.includes(x)) && possibleOptions.includes(x)
       })
     }
   },
