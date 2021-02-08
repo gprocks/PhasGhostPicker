@@ -1,0 +1,20 @@
+{
+    "short_name": "Phas Finder",
+    "name": "Phas Ghost Finder",
+    "start_url": "/",
+    "theme_color": "#272b30",
+    "background_color": "#aaaaaa",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/assets/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
