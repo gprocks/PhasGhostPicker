@@ -57,7 +57,7 @@ export class Oni extends Ghost {
     this.evidenceTypes = [
       evidence.emf,
       evidence.spiritBox,
-      evidence.writing
+      evidence.spiritWriting
     ]
   }
 }
@@ -89,7 +89,7 @@ export class Revenant extends Ghost {
     super('Revenant')
     this.evidenceTypes = [
       evidence.emf,
-      evidence.writing,
+      evidence.spiritWriting,
       evidence.fingerprints
     ]
   }
