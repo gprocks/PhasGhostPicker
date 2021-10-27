@@ -4,5 +4,6 @@ export const evidence = {
   orbs: 'Orbs',
   spiritBox: 'Spiritbox',
   spiritWriting: 'Spirit writing',
+  projector: 'D.O.T.S Projector',
   fingerprints: 'Fingerprints'
 }
